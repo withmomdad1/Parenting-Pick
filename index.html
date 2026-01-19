@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>설이네 육아서 처방전 by 멜 (Beta)</title>
+    <title>육아서 처방전 by 멜 (Beta)</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -117,6 +117,8 @@
             const [step, setStep] = useState(0);
             const [answers, setAnswers] = useState({ category: '', tf: 50, energy: '', sub: '', tone: '' });
             const [result, setResult] = useState(null);
+            
+            const webAppUrl = "https://withmomdad1.github.io/Parenting-Pick/";
 
             const sliderBg = useMemo(() => {
                 const ratio = answers.tf / 100;
@@ -163,12 +165,12 @@
 
             const copyResult = () => {
                 alert("결과 화면을 캡쳐하여 인스타그램 스토리에 공유해보세요! 링크를 복사했습니다.");
-                navigator.clipboard.writeText(window.location.href);
+                navigator.clipboard.writeText(webAppUrl);
             };
 
             const recommendToOthers = () => {
                 alert("이 웹앱의 링크를 복사했습니다. 다른 엄마(아빠)들에게 추천해주세요! ❤️");
-                navigator.clipboard.writeText(window.location.href);
+                navigator.clipboard.writeText(webAppUrl);
             };
 
             const handleBuyClick = () => {
@@ -225,11 +227,10 @@
                                         <div className="py-1"></div>
                                         <p>육아서 추천을 요청하시는 분들에게</p>
                                         <p>각자의 상황과 성향을 고려해</p>
-                                        <p>추천하고 싶은 마음으로 만들어본</p>
+                                        <p>추천하고 싶은 마음을 담아 만든</p>
                                         <p className="highlight inline-block px-1">육아서 처방전입니다.</p>
                                         <div className="py-1"></div>
-                                        <p>대부분 육아서이고 추천하고 싶은</p>
-                                        <p>에세이나 소설도 가끔 나와요.</p>
+                                        <p>직접 읽고 추천하는 40권을 담았습니다.</p>
                                         <div className="py-1"></div>
                                         <p className="highlight inline-block px-1 text-orange-500 font-bold">해보시고 어떤 책 처방 받으셨는 지 공유해주세요 ❤️</p>
                                     </div>
